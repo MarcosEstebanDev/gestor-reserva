@@ -1,12 +1,13 @@
-# Gestor de Reservas - Proyecto en Spring Boot
+
+# README.md - Gestor de Reservas
 
 ## Descripción del Proyecto
 
-El **Gestor de Reservas** es un proyecto basado en **Spring Boot** diseñado para ofrecer una solución escalable y funcional para la gestión de reservas. Sigue una arquitectura en capas que facilita la separación de responsabilidades, la escalabilidad y el mantenimiento del proyecto.
+El **Gestor de Reservas** es un proyecto desarrollado con **Spring Boot**, diseñado para la gestión eficiente y escalable de reservas. El enfoque principal del proyecto es implementar una estructura modular y una arquitectura en capas para facilitar el mantenimiento, la extensión y la reutilización del código.
 
 ## Estructura del Proyecto
 
-La estructura de la aplicación se organiza en **capas** según los principios del diseño modular:
+La aplicación se basa en un diseño modular organizado en **capas**:
 
 ### 1. Capa de Presentación (`Controller`)
 - **Propósito**: Esta capa gestiona la interacción con el cliente o interfaz de usuario. Su principal responsabilidad es recibir las solicitudes HTTP, interpretar las peticiones y devolver las respuestas HTTP.
@@ -47,40 +48,40 @@ La estructura de la aplicación se organiza en **capas** según los principios d
 ### Esquema General de la Arquitectura en Capas
 
 ```plaintext
-[Cliente/Front-End]
-      ↓
-[Controller]  <- Maneja la solicitud del cliente
-      ↓
-[Service]     <- Aplica lógica de negocio
-      ↓
-[Repository]  <- Interactúa con la base de datos
-      ↓
+[Cliente (Frontend/Usuario Final)]
+          ↓
+[Controller]  <- Procesa solicitudes y envía respuestas HTTP
+          ↓
+[Service]     <- Contiene la lógica de negocio
+          ↓
+[Repository]  <- Gestiona operaciones con la base de datos
+          ↓
 [Base de Datos]
 ```
 
-## Enfoque de Desarrollo
+## Buenas Prácticas de Desarrollo
 
-El proyecto se está desarrollando en base a las siguientes buenas prácticas:
+El desarrollo del proyecto sigue estas **mejores prácticas** para garantizar calidad y escalabilidad:
 
-### 1. **Spring Boot y JPA**
-- Uso de Spring Boot con configuraciones automáticas mediante la anotación `@SpringBootApplication`.
-- Uso de **Spring Data JPA** para operaciones en la base de datos.
+### 1. **Uso de Spring Boot y JPA**
+- **Spring Boot**: Configuraciones automáticas gracias a la anotación `@SpringBootApplication`.
+- **Spring Data JPA**: Framework para la manipulación eficaz de datos persistentes en la base de datos.
 
-### 2. **Estilo REST**
-- Diseño de endpoints RESTful que siguen estándares HTTP para la comunicación con el cliente.
-- Uso de anotaciones como `@RestController` para definir controladores REST.
+### 2. **Diseño RESTful**
+- Implementación de endpoints siguiendo estándares REST para una comunicación uniforme y escalable.
+- Uso de anotaciones clave como `@RestController` y convenciones HTTP (GET, POST, PUT, DELETE).
 
-### 3. **Desarrollo en Capas**
-- Cada capa tiene una responsabilidad clara y específica.
-- Las capas están desacopladas entre sí, utilizando estándares como la **Inyección de Dependencias (Dependency Injection)** de Spring para comunicación entre capas.
+### 3. **Arquitectura en Capas**
+- División estricta de responsabilidades por capa (Controller, Service, Repository y Entity).
+- Uso del principio de **Inversión de Dependencias** con **Spring Dependency Injection** para el desacoplamiento de capas.
 
-### 4. **Pruebas**
-- Pruebas unitarias se desarrollan para el código de la lógica de negocio (capa `Service`).
-- Pruebas de integración para verificar el correcto comportamiento de los endpoints.
+### 4. **Enfoque de Pruebas**
+- **Pruebas Unitarias**: Creadas para validar la lógica de negocio en los servicios.
+- **Pruebas de Integración**: Verifican la interacción entre controladores, servicios y repositorios.
 
-### 5. **Base de Datos**
-- Uso de entidades mapeadas en JPA para representar las tablas.
-- Posibilidad de usar H2 (base de datos en memoria) para entornos de desarrollo y bases de datos relacionales como **MySQL** o **PostgreSQL** para entornos productivos.
+### 5. **Gestión de Base de Datos**
+- Implementación de **JPA** con entidades que reflejan la estructura de tablas relacionales.
+- Bases de datos compatibles: H2 (desarrollo) y motores como **MySQL** o **PostgreSQL** (entornos productivos).
 
 ---
 
@@ -107,8 +108,7 @@ El proyecto se está desarrollando en base a las siguientes buenas prácticas:
 
 ## Aporte y Desarrollo
 
-El proyecto se mantiene utilizando metodologías ágiles:
-- **Scrum**: Sprints para planear y gestionar el desarrollo.
+El proyecto se mantiene utilizando :
 - **Control de Versiones**: Se utiliza **Git** para control de versiones junto con herramientas como **GitHub** o **GitLab**.
 
 ---
